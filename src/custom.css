@@ -1,0 +1,18 @@
+.row {
+    padding: 15px;
+}
+
+.card {
+    flex-direction: row!important;
+    padding: 15px;
+}
+
+.card-img-top {
+    width: 10%;
+}
+
+.seperator {
+    height: 3.2rem;
+    margin: -3px 10px 0 9.5px;
+    border-left: 2px solid #222020;
+}
