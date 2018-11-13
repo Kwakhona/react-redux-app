@@ -1,7 +1,6 @@
 import  React, { Component } from 'react'
 import { getCategories, getCategoryScience } from '../actions/actionCreators';
 import GetCategoryScience from '../containers/getCategoryScience';
-import { setCategory } from '../actions/actionCreators';
 
 class Categories extends Component {
     constructor(props) {
@@ -32,7 +31,9 @@ class Categories extends Component {
                         <div className="col">
                             {
                                 (categoriesRequest && categoriesRequest.loading) ?
-                                    <div>Loading categories...</div>
+                                    <div className="text-center">
+                                        <i className="fa fa-spinner fa-spin"></i>
+                                    </div>
                                     : (categoriesFailure && !categoriesFailure.loading && categoriesFailure.error) ?
                                         <div className="alert alert-danger">{categoriesFailure.error}</div>
                                     :
