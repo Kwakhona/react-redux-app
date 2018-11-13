@@ -18,6 +18,7 @@ ReactDOM.render(
     <Provider store={store}>
         <AppRouter />
     </Provider>,
+    // eslint-disable-next-line no-undef
     document.getElementById('root')
 );
 

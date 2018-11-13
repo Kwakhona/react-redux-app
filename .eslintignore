@@ -1,0 +1,4 @@
+# src/serviceWorker.js
+# src/store/configureStore.dev.js
+# src/store/configureStore.js
+# src/**/*.spec.js

@@ -30,7 +30,7 @@ export const getCategoryScienceRequest = () => {
     return {
         type: types.GET_CATEGORY_SCIENCE_REQUEST,
         loading: true
-    }
+    };
 };
 
 export const getCategoryScienceSucess = response => {

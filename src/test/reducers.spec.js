@@ -1,6 +1,177 @@
 import reducers from '../reducers';
 
-test('reducers', () => {
+
+// eslint-disable-next-line no-undef
+test('reducers - GET_CATEGORIES_REQUEST', () => {
+    let state;
+    state = reducers({
+        categories: {
+            categoriesRequest: {
+                loading: false,
+                error: null
+            },
+            categoriesSuccess: {
+                categories: [],
+                loading: false,
+                error: null
+            },
+            categoriesFailure: {
+                loading: false,
+                error: null
+            }
+        },
+        categoryScience: {
+            categoryScienceRequest: {
+                loading: true,
+                error: null
+            },
+            categoryScienceFailure: {
+                loading: false,
+                error: null
+            },
+            categoryScienceSuccess: {
+                categoryScience: {},
+                loading: false,
+                error: null
+            }
+        }
+    }, {
+        type: 'GET_CATEGORIES_REQUEST',
+        loading: true
+    });
+    // eslint-disable-next-line no-undef
+    expect(state).toEqual({
+        categories: {
+            categoriesRequest: {
+                loading: true,
+                error: null
+            },
+            categoriesSuccess: {
+                categories: [],
+                loading: false,
+                error: null
+            },
+            categoriesFailure: {
+                loading: false,
+                error: null
+            }
+        },
+        categoryScience: {
+            categoryScienceRequest: {
+                loading: true,
+                error: null
+            },
+            categoryScienceFailure: {
+                loading: false,
+                error: null
+            },
+            categoryScienceSuccess: {
+                categoryScience: {},
+                loading: false,
+                error: null
+            }
+        }
+    });
+});
+// eslint-disable-next-line no-undef
+test('reducers - GET_CATEGORIES_SUCCESS', () => {
+    let state;
+    state = reducers({
+        categories: {
+            categoriesRequest: {
+                loading: true,
+                error: null
+            },
+            categoriesSuccess: {
+                categories: [],
+                loading: false,
+                error: null
+            },
+            categoriesFailure: {
+                loading: false,
+                error: null
+            }
+        },
+        categoryScience: {
+            categoryScienceRequest: {
+                loading: true,
+                error: null
+            },
+            categoryScienceFailure: {
+                loading: false,
+                error: null
+            },
+            categoryScienceSuccess: {
+                categoryScience: {},
+                loading: false,
+                error: null
+            }
+        }
+    }, {
+        type: 'GET_CATEGORIES_SUCCESS',
+        loading: false,
+        payload: {
+            data: ['explicit', 'dev', 'movie', 'food', 'celebrity', 'science', 'sport', 'political', 'religion', 'animal', 'history', 'music', 'travel', 'career', 'money', 'fashion'],
+            status: 200,
+            statusText: '',
+            headers: {
+                'content-type': 'application/json',
+                'cache-control': 'no-cache'
+            },
+            config: {
+                transformRequest: {},
+                transformResponse: {},
+                timeout: 0,
+                xsrfCookieName: 'XSRF-TOKEN',
+                xsrfHeaderName: 'X-XSRF-TOKEN',
+                maxContentLength: -1,
+                headers: {
+                    Accept: 'application/json, text/plain, */*'
+                },
+                method: 'get',
+                url: 'https://api.chucknorris.io/jokes/categories'
+            },
+            request: {}
+        }
+    });
+
+    // eslint-disable-next-line no-undef
+    expect(state).toEqual({
+        categories: {
+            categoriesRequest: {
+                loading: false,
+                error: null
+            },
+            categoriesSuccess: {
+                categories: ['explicit', 'dev', 'movie', 'food', 'celebrity', 'science', 'sport', 'political', 'religion', 'animal', 'history', 'music', 'travel', 'career', 'money', 'fashion'],
+                loading: false,
+                error: null
+            },
+            categoriesFailure: {
+                loading: false,
+                error: null
+            }
+        },
+        categoryScience: {
+            categoryScienceRequest: {
+                loading: true,
+                error: null
+            },
+            categoryScienceFailure: {
+                loading: false,
+                error: null
+            },
+            categoryScienceSuccess: {
+                categoryScience: {},
+                loading: false,
+                error: null
+            }
+        }
+    });
+});
+
+// eslint-disable-next-line no-undef
+test('reducers - GET_CATEGORY_SCIENCE_REQUEST', () => {
     let state;
     state = reducers({
         categories: {
@@ -37,6 +208,8 @@ test('reducers', () => {
         type: 'GET_CATEGORY_SCIENCE_REQUEST',
         loading: true
     });
+
+    // eslint-disable-next-line no-undef
     expect(state).toEqual({
         categories: {
             categoriesRequest: {
@@ -71,8 +244,8 @@ test('reducers', () => {
     });
 });
 
-
-test('reducers', () => {
+// eslint-disable-next-line no-undef
+test('reducers - GET_CATEGORY_SCIENCE_SUCCESS', () => {
     let state;
     state = reducers({
         categories: {
@@ -143,6 +316,8 @@ test('reducers', () => {
             request: {}
         }
     });
+
+    // eslint-disable-next-line no-undef
     expect(state).toEqual({
         categories: {
             categoriesRequest: {

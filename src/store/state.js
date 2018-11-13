@@ -12,7 +12,7 @@ export const initialState = {
         categoriesFailure: {
             loading: false,
             error: null
-        },
+        }
     },
     categoryScience: {
         categoryScienceRequest: {

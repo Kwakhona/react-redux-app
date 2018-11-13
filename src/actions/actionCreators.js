@@ -1,5 +1,12 @@
 import axios from 'axios';
-import { getCategoriesRequest, getCategoriesSuccess, getCategoriesFailure, getCategoryScienceRequest, getCategoryScienceSucess, getCategoryScienceFailure } from './actions';
+import {
+    getCategoriesRequest,
+    getCategoriesSuccess,
+    getCategoriesFailure,
+    getCategoryScienceRequest,
+    getCategoryScienceSucess,
+    getCategoryScienceFailure
+} from './actions';
 
 const ROOT_URL = 'https://api.chucknorris.io/jokes';
 // Action Creator to get Category Science
@@ -13,7 +20,7 @@ export const getCategories = () => {
             dispatch(getCategoriesSuccess(res));
         }, error => {
             dispatch(getCategoriesFailure(error));
-        })
+        });
     };
 };
 
@@ -29,6 +36,6 @@ export const getCategoryScience = category => {
             dispatch(getCategoryScienceSucess(res));
         }, error => {
             dispatch(getCategoryScienceFailure(error));
-        })
+        });
     };
 };
