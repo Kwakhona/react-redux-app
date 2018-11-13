@@ -41,6 +41,6 @@ const categoryScienceReducer = (state = initialState.categoryScience, action) =>
         default:
             return state;
     }
-}
+};
 
 export default categoryScienceReducer;

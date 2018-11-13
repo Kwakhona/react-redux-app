@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
     return {
         categories: state.categories
     };
-}
+};
 
 
 export default  connect(

@@ -16,13 +16,12 @@ class CategoryScience extends Component {
     render() {
         const { categoryScienceRequest, categoryScienceSuccess, categoryScienceFailure } = this.props.categoryScience;
 
-        // console.log(this.props);
         return (
             <div className="row">
                 <div className="col">
                 {(categoryScienceRequest && categoryScienceRequest.loading)?
                     <div className="text-center">
-                        <i className="fa fa-spinner fa-spin"></i>
+                        <i className="fa fa-spinner fa-spin fa-2x"></i>
                     </div>
                     : (categoryScienceFailure && !categoryScienceFailure.loading && categoryScienceFailure.error && categoryScienceFailure.error != null) ?
                         <div className="alert alert-danger">{categoryScienceFailure.error}</div>
@@ -44,6 +43,11 @@ class CategoryScience extends Component {
 
 CategoryScience.propTypes = {
     dispatch: PropTypes.func.isRequired,
-}
+    category: PropTypes.string,
+    categoryScience: PropTypes.object,
+    categoryScienceRequest: PropTypes.object,
+    categoryScienceSuccess: PropTypes.object,
+    categoryScienceFailure: PropTypes.object,
+};
 
 export default CategoryScience;

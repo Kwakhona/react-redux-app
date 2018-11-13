@@ -7,7 +7,7 @@ const mapStateToProps = (state) => {
     return {
         categoryScience: state.categoryScience
     };
-}
+};
 
 
 export default connect(

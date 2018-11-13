@@ -37,9 +37,9 @@ const categoriesReducer = (state = initialState.categories, action) => {
                     loading: false,
                     error: action.payload
                 }
-            }
+            };
         default:
-            return state
+            return state;
     }
 };
 
