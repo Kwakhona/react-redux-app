@@ -26,8 +26,10 @@ class CategoryScience extends Component {
                     : (categoryScienceFailure && !categoryScienceFailure.loading && categoryScienceFailure.error && categoryScienceFailure.error != null) ?
                         <div className="alert alert-danger">{categoryScienceFailure.error}</div>
                     :
-                    <div className="card">
-                        <img className="card-img-top" src={categoryScienceSuccess.categoryScience.icon_url} alt="icon" />
+                    <div className="card ">
+                        <div className="card-img-top">
+                            <img className="img" src={categoryScienceSuccess.categoryScience.icon_url} alt="icon" />
+                        </div>
                         <div className="card-body">
                             <p className="card-text">
                                 {categoryScienceSuccess.categoryScience.value}

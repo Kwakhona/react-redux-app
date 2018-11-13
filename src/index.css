@@ -15,3 +15,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.img {
+  width: 8rem;
+  height: 8rem;
+}
+@media screen and (max-width: 30rem) {
+  .card {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:30rem) {
+  .row {
+    padding: 15px;
+  }
+
+  .card {
+    flex-direction: row !important;
+    padding: 15px;
+  }
+}
