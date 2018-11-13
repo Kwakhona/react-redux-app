@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getCategoryScience } from '../actions/actionCreators';
 
+
 class CategoryScience extends Component {
 
     componentDidMount() {
@@ -20,12 +21,14 @@ class CategoryScience extends Component {
             <div className="row">
                 <div className="col">
                 {(categoryScienceRequest && categoryScienceRequest.loading)?
-                    <div>Loading {this.props.category}...</div>
+                    <div className="text-center">
+                        <i className="fa fa-spinner fa-spin"></i>
+                    </div>
                     : (categoryScienceFailure && !categoryScienceFailure.loading && categoryScienceFailure.error && categoryScienceFailure.error != null) ?
                         <div className="alert alert-danger">{categoryScienceFailure.error}</div>
                     :
                     <div className="card">
-                        <img className="card-img-top" src={categoryScienceSuccess.categoryScience.icon_url} alt="Card image cap" />
+                        <img className="card-img-top" src={categoryScienceSuccess.categoryScience.icon_url} alt="icon" />
                         <div className="card-body">
                             <p className="card-text">
                                 {categoryScienceSuccess.categoryScience.value}

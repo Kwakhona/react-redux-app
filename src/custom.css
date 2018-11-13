@@ -16,3 +16,7 @@
     margin: -3px 10px 0 9.5px;
     border-left: 2px solid #222020;
 }
+
+@media(min-wdith: 700px) {
+    font: red
+}
